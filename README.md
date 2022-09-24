@@ -20,7 +20,7 @@
 * openssh-server
 * ansible
 
-**Task implementation**: Files [hosts](/task2/hosts) and [apache_install.yml](/task2/apache2_install.yml) were created. File hosts includes settings of host on which apache installation is executed. Ansible instructions are present in apache_install.yml file. This file installs apache2 webserver on remote host (`webservers` group of file `hosts`) and checks the installation by issuing web-request on this host and port 80.  
+**Task implementation**: Files [hosts](/task2/hosts) and [apache_install.yml](/task2/apache_install.yml) were created. File hosts includes settings of host on which apache installation is executed. Ansible instructions are present in apache_install.yml file. This file installs apache2 webserver on remote host (`webservers` group of file `hosts`) and checks the installation by issuing web-request on this host and port 80.  
 
 **Task troubleshooting**: There were no issues in executing this task.  
 
@@ -36,6 +36,26 @@
 ## Docker
 ### Manage Docker microservices
 > Task description: Create a docker microservice.  
+
+**Task preparation**: This task required installation of `docker` on server and `ntpdate` on client.
+
+**Task implementation**: I used [this](https://hub.docker.com/r/cturra/ntp) docker image which uses [chrony](https://github.com/mlichvar/chrony) implementation of ntp-server. The docker image was run like `docker run --rm -d -p 123:123/udp cturra/ntp` and then `ntpdate` was used to synchronise client's time with server.    
+
+**Task troubleshooting**: There were no issues in executing this task.  
+
+**Task verification**:  
+| ![Task3. Running docker container](/img/task3_ntp_start.png) |
+|:--:|
+| Running docker container |
+
+| ![Task3. Verifying docker container start](/img/task3_ntp_check_running.png) |
+|:--:|
+| Verifying docker container start |
+
+| ![Task3. Synchronizing client time to match server's](/img/task3_ntp_synchronizing.png) |
+|:--:|
+| Synchronizing client time to match server's |
+
 
 ## Jenkins
 ### CI/CD Pipelinr using Jenkins
