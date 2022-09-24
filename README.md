@@ -4,10 +4,12 @@
 ### Manage GitHub scripts and documents
 > Task description: Create a folder “Skills2022” in your DEVASC virtual machine and start a git repository.  
 
-**Task preparation**: This task required creating a folder locally on a Linux VM, initializing that folder, and uploading its contents to a githab repository.  
-**Task implementation**: A repository on githab was created and a file README.md was written in the main directory, where the report on the term paper is formed and also subdirectory `img`.  
-**Task troubleshooting**: There were no problems in completing this task.  
-**Task verification**: ![Task_001_000](/img/task01.gif)  
+**Task preparation**: This task requires deep knowledge of linux file system and bash commands such as mkdir and so on.
+
+**Task implementation**: A folder was initialized as a git repository. This folder contains MarkDown formatted file README.md and folder `img`. 
+**Task troubleshooting**: There were no issues in executing this task.  
+**Task verification**:  
+![Task_001_000](/img/task01.gif)  
 
 ## Ansible Skills Test
 ### Manage Web Servers through Ansible.
