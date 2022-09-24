@@ -15,6 +15,24 @@
 ### Manage Web Servers through Ansible.
 > Task description: Write the Ansible script to install and test the websever with ping command in a single playbook. Choose either Apache or Nginx server based on your own preference.  
 
+**Task preparation**: This task required installation of:
+* sshpass
+* openssh-server
+* ansible
+
+**Task implementation**: Files [hosts](/task2/hosts) and [apache_install.yml](/task2/apache2_install.yml) were created. File hosts includes settings of host on which apache installation is executed. Ansible instructions are present in apache_install.yml file. This file installs apache2 webserver on remote host (`webservers` group of file `hosts`) and checks the installation by issuing web-request on this host and port 80.  
+
+**Task troubleshooting**: There were no issues in executing this task.  
+
+**Task verification**:  
+| ![Task2. Install Apache](/img/task2_apache_install.png) |
+|:--:|
+| Apache installation |
+
+| ![Task2. Apache installation check](/img/task2_apache_ping.png) |
+|:--:|
+| Check Apache installation via http-request |
+
 ## Docker
 ### Manage Docker microservices
 > Task description: Create a docker microservice.  

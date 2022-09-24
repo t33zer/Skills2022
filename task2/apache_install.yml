@@ -1,0 +1,16 @@
+- hosts: webservers
+  become: yes
+  tasks:
+    - name: INSTALL APACHE2
+      apt: name=apache2 update_cache=yes state=latest
+      notify:
+        - RESTART APACHE2
+    - name: ping
+      uri:
+        url: http://{{ ansible_host }}/
+        method: GET
+ 
+ 
+  handlers:
+    - name: RESTART APACHE2
+      service: name=apache2 state=running 
