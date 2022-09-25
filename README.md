@@ -63,3 +63,14 @@
 
 ## Unit Testing
 > Task description: Create a unittest script in Python that asserts the output of all the functions in the given Python module.  
+
+**Task preparation**: This task requires understanding of unit testing and python-module `unittest`.
+
+**Task implementation**: I have added test classes for each module in file [main.py](/task5/main.py) and later executed these **14** tests with `unittest.main()`. In the task verification screenshot there's the result of unit testing with one of the tests failed by returning wrong type.
+
+**Task troubleshooting**: There were no issues in executing this task.  
+
+**Task verification**:  
+| ![Task5. Running tests](/img/task5_unittests.png) |
+|:--:|
+| Running unit tests |
